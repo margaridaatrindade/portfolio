@@ -1,0 +1,1000 @@
+*{
+    font-family: Oswald, sans-serif;
+}
+body{
+    background-color:#ece5e5;
+    font-family: Oswald, sans-serif;
+}
+
+/*Links - geral*/
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Oswald, sans-serif;
+}
+
+/******************************CABEÇALHO*****************************/
+
+/*Barra do cabeçalho*/
+
+.cabecalho { 
+    z-index: 80; 
+    background-color: #ffffff; 
+    border-radius: 3.75pt;
+    width: 960pt; 
+    height: 75pt; 
+}
+
+/*Logotipo*/
+
+#logo {
+    width: auto;
+    height: 82.5pt;
+}
+
+/*Icons no cabeçalho*/
+
+nav img {
+    width:41.25pt;
+    height: auto;
+}
+
+/*******************************INDEX***********************************/
+
+/*Zona com o logotipo e o botao para comecar o pedido*/
+
+#pedido {
+    font-family: Oswald, sans-serif;
+    font-size: 37.5pt;
+}
+
+/*Logotipo com nome*/
+
+#pedido img {
+    width: 675pt;
+    height: auto;
+}
+
+/*Botao para comecar a fazer o pedido*/
+
+#btnPedido {
+    margin-left: 3vw;
+    border-style: none;
+    width: 450pt;
+    height: 67.5pt;
+    left: 279.75pt;
+    top: 247.5pt;
+    padding: 9.75pt 9.75pt;
+    border-radius: 15pt;
+    background-color: #c0b0b079;
+    box-shadow: 7.5pt 3.75pt 3.75pt rgba(0, 0, 0, 0.559);
+    font-size: 33.75pt;
+}
+
+
+
+/*******************************MENU***********************************/
+
+/*Titulo Menu*/
+
+h2 {
+    color: rgba(240, 192, 1, 0.923);
+    font-family: Oswald, sans-serif;
+    font-size: 52.5pt;
+    font-weight: 400;
+}
+
+/*Botoes e filtros do menu*/
+
+ .filtros1 {
+    
+    width: 142.5pt;
+    height: 37.5pt;
+    background-color:#ffffff;
+    font-weight: 400;
+    font-size: 18.75pt;
+    border-radius: 3.75pt;
+}
+
+#pp{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top:1vw ;
+    padding-bottom: 1vw;
+}
+
+#s{
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    padding-top:1vw ;
+    padding-bottom: 1vw;
+
+}
+#b{
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top:1vw ;
+    padding-bottom: 1vw;
+
+}
+
+
+.botaoselecionado {
+    color: #ffffff;
+    background-color: rgb(5, 177, 17) ;
+}
+
+.botaoselecionado a {
+    color: #ffffff;
+}
+
+.multiselect {
+    
+    position: relative;
+    background-color:#dadada;
+    border-style: none;
+    text-align: left;
+}  
+  
+  #checkboxes {
+    position: absolute;
+    display: none;
+    border: 0.75pt #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+
+/*Zona onde estão as opcoes do menu*/
+
+#menu {
+    width: 765pt;
+    height: 412.5pt;
+    border-radius: 3.75pt;
+}
+
+#menu div {
+    width: 363.75pt;
+    height: 195pt;
+    border: 0pt;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 3.75pt;
+}
+
+#menu p {
+    font-family: Oswald, sans-serif;
+}
+
+/*Nome da opcao do menu*/
+
+#texto {
+    font-size: 18.75pt;
+    font-weight: 400;
+}
+
+/*Preço das opcoes do menu*/
+
+#preco {
+    color: rgba(240, 192, 1, 0.923);
+    font-size: 18.75pt;
+    font-weight: 400;
+}
+
+/*Imagens do menu*/
+
+#IconMenu {
+    width: 116.25pt;
+    height: auto;
+}
+
+#IconMenu2 {
+    width: 105pt;
+    height: auto;
+}
+
+/*Botao de pedir a opcao do menu*/
+
+#botoes1 {
+    width: 86.25pt;
+    height: 37.5pt;
+    font-size: 15pt;
+    background-color:#e6e1e1;
+}
+
+/*Botao info da opcao do menu*/
+
+#botoes2 {
+    width: 86.25pt;
+    height: 37.5pt;
+    background-color:#e6e1e1;
+}
+
+/*Icon Info das opcoes do menu*/
+
+#IconInfo {
+    width: 22.5pt;
+    height: auto;
+}
+
+/*usado s no pagamento*/
+
+#pedidoList, #quest{
+    display: none;
+
+} 
+
+.btnpediup{
+    display:table-row;
+}
+/***************************OPCOES DE PAGAMENTO********************/
+
+#listapedido {
+  
+    overflow-y:scroll;
+    text-align: left;
+    border-style: none;
+    width: 502.5pt;
+    height: 300pt;
+    padding: 9.75pt 1.5pt;
+    border-radius: 3.75pt;
+    background-color: #ffffff79;
+    font-weight: 500;
+    font-size: 18.75pt;
+}
+
+
+
+#listapedido h4{
+    padding-top: 1pt; 
+    padding-left: 7.5pt;
+    color: #202020;
+    font-weight: 500;
+ }
+
+ .filtros2 {
+    width: 142.5pt;
+    height: 37.5pt;
+    background-color:#c4c0c0;
+    font-weight: 400;
+    font-size: 18.75pt;
+    border-radius: 3.75pt;
+}
+/****************************PAGAMENTO**************************/
+
+/*Zona com opcoes de pagamento*/
+
+#pagamento {
+    /*background-color: #c0b0b079;*/
+    border-radius: 3.75pt;
+    font-family: Oswald, sans-serif;
+}
+
+/*Quadrado da opcao de pagamento*/
+
+#pagamento div {
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 3.75pt;
+    padding-top: 0.5%;
+    text-align: center;
+    border: 0;
+    box-shadow: 0 0 7.5pt rgba(0, 0, 0, 0.63);
+}
+
+/*Imagens Numerario*/
+
+.IconPagamento1 {
+    width: 150pt;
+    height: auto;
+}
+
+/*Imagens Multibanco*/
+
+.IconPagamento2 {
+    width: 127.5pt;
+    height: auto;
+}
+
+/*Imagens MbWay*/
+
+.IconPagamento3 {
+    width: 180pt;
+    height: auto;
+}
+
+#popupmbway p ,#popupifreserva p , .popupconcluirreserva p {
+    font-size:22.5pt;
+}
+
+#ppp {
+    font-size: 26.25pt;
+}
+
+#popupnumerario p ,#popupmultibanco p {
+    font-size: 22.5pt;
+}
+
+/*Botao de cancelar metodo de pagamento*/
+
+.btncancelarpopup {
+    border-style: none;
+    width: 135pt;
+    height: 45pt;
+    padding: 9.75pt 1.5pt ;
+    border-radius: 15pt;
+    background-color: #f55858c9;
+    font-weight: 500;
+    font-size: 18.75pt;
+    
+}
+
+/*Botao de concluir metodo de pagamento*/
+
+.btnconcluirpopup {
+    border-style: none;
+    width: 135pt;
+    height: 45pt;
+    padding: 9.75pt 1.5pt ;
+    border-radius: 15pt;
+    background-color: #55ef41d8;
+    font-weight: 500;
+    font-size: 18.75pt;
+
+}
+
+.pedidoList label{
+    display: block;
+    font-weight: 400 ;
+}
+
+#oi {
+    font-family: Oswald, sans-serif;
+    margin-left: 1.2vw;
+}
+
+#empregado {
+    font-family: Oswald, sans-serif;
+    font-size: 40pt;
+}
+
+/****************************RESERVAS**************************/
+
+/*cada fieldset do formulario da reserva*/
+
+#frmReserva fieldset {
+    max-width: 60vw;
+    font-size: 20pt;
+    font-family: Oswald, sans-serif;
+    border:0;
+}
+
+/*Botao para fazer a reserva*/
+
+.btnFazerReserva {
+    display: inline;
+    text-align: center;
+    border-style: none;
+    width: 127.5pt;
+    height: 37.5pt;
+    padding: 8pt 1.5pt ;
+    border-radius: 15pt;
+    background-color: #c0b0b079;
+    font-weight: 400;
+    font-size: 15pt;
+    
+}
+
+#alinhar {
+    color:#ece5e5;
+    display: inline-block;
+}
+
+input {
+    display: inline-block;
+}
+
+/****************************ROLETA DA SORTE**************************/
+
+* {
+    box-sizing: border-box;
+  }
+
+.wrapper {
+    width: 90%;
+    max-width: 34.37em;
+    max-height: 90vh;
+   
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 1em;
+    
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #wheel {
+    max-height: inherit;
+    width: inherit;
+    top: 0;
+    padding: 0;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #spin-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 26%;
+    width: 26%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+    color: #c66e16;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+  #roleta img {
+    position: absolute;
+    width: 4em;
+    top: 45%;
+    right: -8%;
+  }
+  #final-value {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1.5em;
+    color: #202020;
+    font-weight: 500;
+  }
+  @media screen and (max-width: 576pt) {
+    .wrapper {
+      font-size: 9pt;
+    }
+    img {
+      right: -5%;
+    }
+  }
+
+#btnavancar {
+    border-style: none;
+    width: 135pt;
+    height: 45pt;
+    padding: 9.75pt 1.5pt ;
+    border-radius: 15pt;
+    background-color: #55ef41d8;
+    font-weight: 400;
+    font-size: 17.25pt;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnavancar2 p {
+    
+    font-size:17.25pt;
+    
+}
+
+#btnconcluirvisita {
+    border-style: none;
+    width: 135pt;
+    height: 45pt;
+    padding: 9.75pt 1.5pt ;
+    border-radius: 15pt;;
+    background-color: #55ef41d8;
+    font-weight: 500;
+    font-size: 17.25pt;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popupconcluirvisita p {
+    font-size: 37.5pt;
+}
+
+
+/************************POP-UP's************************************/
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    background: #ece5e5;
+    border-radius: 3.75pt;
+    width: 50%;
+    transition: all 5s ease-in-out;
+    max-height: 70%;
+    
+}
+
+.popup h2 {
+    color: #333;
+    font-size: 37.5pt;
+}
+
+#popupclose {
+    transition: all 200ms;
+    font-size: 22.5pt;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+}
+
+/*Linktree nos Créditos*/
+
+.linktree {
+    background-color: #bbb9b9;
+    border-radius: 3.75pt;
+    font-family: Oswald, sans-serif;
+    font-size: 15pt;
+}
+
+/*Bandeiras do idioma*/
+
+.IconIdioma {
+    width: 142.5pt;
+    height: auto;
+}
+
+
+/*Legenda das bandeiras do idioma*/
+
+#idioma figcaption {
+    font-size: 22.5pt;
+}
+
+/*Tempo previsto*/
+
+.progress {
+    position: relative;
+    width: 95%;
+    height: 45pt;
+    background:#c1c1c1;
+    border-radius: 3.75pt;
+    overflow: hidden;
+    margin: auto;
+}
+  
+.progress_fill {
+    width: 0%;
+    height: 100%;
+    background: #333333;
+    transition: all 0.2s;
+}
+  
+.progress_text {
+    position: absolute;
+    top: 50%;
+    right:  3.75pt;
+    transform: translateY(-50%);
+    font: bold 10.5pt "Quicksand", sans-serif;
+    color: #333333;
+}
+
+#time {
+    font-size:22.5pt;
+}
+
+/*Carrinho + popup do pedido*/
+
+.list {
+	height: 100pt;
+}
+
+.app {
+    visibility: hidden;
+    border-radius: 3.75pt;
+    width: 375pt;
+    height: 412.5pt;
+    box-shadow: 0 0 7.5pt rgba(0, 0, 0, 0.63);
+    background-color: rgb(255, 255, 255);
+    font-family: Oswald, sans-serif;
+}
+
+.app p {
+    color: #838383;
+    width: 195pt;
+}
+
+.app span {
+    font-size: 37.5pt;
+}
+
+h3 {
+	font-size: 33.75pt;
+	line-height: 0;
+	color: rgba(240, 192, 1, 0.923);
+	font-weight: 300;
+    font-family: Oswald, sans-serif;
+    margin-left: 15pt;
+}
+
+h4 {
+    
+	font-size: 18.75pt;
+	line-height: 0;
+	color:#6b6868;
+	font-weight: 400;
+    font-family: Oswald, sans-serif;
+}
+
+.fa {
+	color: rgba(0,0,0,0.15);
+	font-size: 3em;
+}
+
+li {
+	list-style: none;
+	font-size:15pt;
+	color: #6b6868;
+	width: 82.5pt;
+}
+
+.popup li {
+    width: 200pt;
+}
+
+.app li img{
+    width: 100%;
+}
+
+
+.closepopup {
+    font-size: 18.75pt;
+    width: 20%;
+    font-size: 12pt;
+    color: #B9B3B3;
+}
+
+.openpopup {
+    width: 80%;
+    height: 13%;
+    font-size: 16.5pt;
+    box-shadow: 0 0 3.75pt rgba(134, 134, 134, 0.6);
+    background-color: #FFF;
+    border-radius: 3.75pt;
+    background-color: rgba(240, 192, 1, 0.923);
+    font-weight: 400;
+    transition-duration:1s;
+    font-family: Oswald, sans-serif;
+    color:#ffffff;
+}
+
+.openpopup2 {
+    padding-top: 15pt;
+    width: 80%;
+    height: 15%;
+    font-size: x-large;
+    box-shadow: 0 0 3.75pt rgba(173, 171, 171, 0.6);
+    background-color: #FFF;
+    border-radius: 3.75pt;
+    background-color: #c9c3c3;
+    color:rgb(0, 0, 0);
+    font-weight: 400;
+    transition-duration:1s;
+    font-family: Oswald, sans-serif;
+}
+
+  
+.openpopup button {
+    font-size: x-large;
+    padding-left: 30pt;
+    margin-right: 22.5pt;
+    text-align: center;
+    border-color: transparent;
+    box-shadow: none;
+    transition-duration:1s;
+    background-color: transparent;
+}
+
+
+
+#tray {
+    transition-duration:0.5s;
+    cursor: pointer;
+}
+
+#tray img{
+    height: auto;
+    width: 41.25pt;
+}
+
+.count {
+    background-color: rgba(212,7,10,1.00);
+    border-radius: 50%;
+    width:16.5pt;
+    height: 16.5pt;
+    color: #fff;
+    font-weight: 300;
+}
+
+.closewindow {
+    color: #B5B5B5;
+    width:15pt;
+    border-radius: 1000%;
+    height: 15pt;
+}
+
+
+.popupcreditos a , .popup p {
+    font-size: 14.25pt;
+    color: black;
+    font-family: Oswald, sans-serif;
+    margin-left: 1.5vw;
+}
+
+.popup li {
+    font-size: 14.25pt;
+    color: black;
+    font-family: Oswald, sans-serif;
+    margin-left: 1.5pt;
+}
+
+.IconIdioma2 {
+    width: 60pt;
+    height: auto;
+    display: inline-block;
+    margin-right: 24vw;
+}
+
+#origem {
+    font-size:19.5pt;
+    display: flex;
+    position: absolute;
+    text-align: left;
+}
+
+
+/*questionario*/
+
+#s2,#s3  {display: none}
+
+
+/* Slideshow container */
+.slideshow-container {
+  margin: auto auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 12pt;
+  color: white;
+  font-weight: 500;
+  font-size: 13.5pt;
+  transition: 0.6s ease;
+  border-radius: 0 2.25pt 2.25pt 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  margin: auto auto;
+  border-radius: 2.25pt 0 0 2.25pt;
+}
+
+
+.prev, .next {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 11.25pt;
+  padding: 6pt 9pt;
+  position: absolute;
+  bottom: 6pt;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 9pt;
+  padding: 6pt 9pt;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 11.25pt;
+  width: 11.25pt;
+  margin: 0 1.5pt;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#divQ{
+    overflow-y:scroll;
+    height: 375pt;
+    width: 375pt;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 3.75pt;
+    padding-top: 0.5%;
+    text-align: center;
+    border: 0;
+    box-shadow: 0 0 7.5pt rgba(0, 0, 0, 0.63);
+
+}
+
+#btnavancar2 {
+    border-style: none;
+    width: 120pt;
+    height: 30pt;
+    padding: 9.75pt 1.5pt;
+    border-radius: 15pt;
+    background-color: #55ef41d8;
+    font-weight: 400;
+    font-size: 9.75pt;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10.7vw;
+    margin-top: 2vw;
+}
+
+#btnavancar3 {
+    border-style: none;
+    width: 120pt;
+    height: 30pt;
+    padding: 9.75pt 1.5pt;
+    border-radius:15pt;
+    background-color: #f55858c9;
+    font-weight: 400;
+    font-size: 16.5pt;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    margin-left: 10.7vw;
+}
+
+
+#botaoQ{
+    border-style: none;
+    width: 120pt;
+    height: 30pt;
+    padding: 9.75pt 1.5pt;
+    border-radius:15pt;
+    font-weight: 400;
+    font-size: 16.5pt;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    background-color: #55ef41d8;
+    margin-left: 10.7vw;
+}
+
+
+/* ESTRELAS */
+
+.slideshow-container form {
+    margin: 0 auto;
+    width: 146.25pt;
+}
+
+.centerp {
+    text-align: center;
+}
+
+div.stars {
+    width: 202.5pt;
+    display: inline-block;
+}
+
+input.star {
+    display: none;
+}
+
+label.star {
+    float: right;
+    padding: 7.5pt;
+    font-size: 15pt;
+    color: rgb(253, 212, 9);
+    transition: all .2s;
+}
+
+input.star:checked~label.star:before {
+    float: none;
+    content: '\f005';
+    color: rgb(255, 111, 0);
+    transition: all .25s;
+    text-shadow: 0 0  15pt rgb(214, 118, 0);
+}
+
+input.star-5:checked~label.star:before {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 15pt rgb(165, 0, 0);
+}
+
+input.star-4:checked~label.star:before {
+    color: rgb(255, 81, 0);
+    text-shadow: 0 0  15pt rgb(179, 77, 0);
+}
+
+input.star-3:checked~label.star:before {
+    color: rgb(255, 145, 0);
+    text-shadow: 0 0 15pt rgb(189, 120, 0);
+}
+
+input.star-2:checked~label.star:before {
+    color: rgb(255, 204, 0);
+    text-shadow: 0 0  15pt rgb(216, 223, 25);
+}
+
+input.star-1:checked~label.star:before {
+    color: rgb(255, 230, 0);
+    text-shadow: 0 0  15ptx rgb(249, 255, 68);
+}
+
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+
+#time {
+    font-family: Oswald, sans-serif;
+}
+
+
