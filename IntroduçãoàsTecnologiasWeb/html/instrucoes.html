@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!--  Universidade de Lisboa  
+      Faculdade de Ciências   
+      Licenciatura - Tecnologias de Informação 
+      2021-2022 Grupo 18   
+      Joana Ribeiro nº 58625    
+      Laura Tomás nº 58641     
+      Margarida Trindade nº 58615    
+      TP21            
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilo.css">
+    <link rel="stylesheet" href="../estilos/posicoes.css">
+
+    <script src="../scripts/instrucoes.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>Instruções</title>
+</head>
+
+<body class="fundo" id="gridInstruções">
+    <h1 class="Subtitulo">Instruções</h1>
+
+    <nav>
+        <a href="index.html"><img src="https://iconvulture.com/wp-content/uploads/2017/11/home.svg" alt="Inicio_Jogo"
+                class="IconNav"></a>
+        <a href="jogo.html"><img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Jogo"
+                class="IconNav"></a>
+        <a href="pontuacoes.html"><img src="https://svgsilh.com/svg/2355897.svg" alt="Pontuações" class="IconNav"></a>
+        <a href="definicoes.html"><img
+                src="https://wd40.pt/app/plugins/ct-ultimate-gdpr/assets/css/images/skin2-func.svg" alt="Definições"
+                class="IconNav"></a>
+        <a class="selected" href="instrucoes.html"><img
+                src="https://www.pngkit.com/png/full/12-120484_user-manual-icon-manual-icon.png" alt="Instruções"
+                class="IconNav"></a>
+        <a href="creditos.html"><img src="https://cdn-icons-png.flaticon.com/512/771/771190.png" alt="Créditos"
+                class="IconNav"></a>
+    </nav>
+
+    <div class="instruções1">
+
+        <div class="slides fade">
+
+            <h2>Tente encontrar todas as minas sem as explodir!</h2><br>
+            <ul>
+                <li>Carregue num quadrado e veja quantas minas existem à volta dele.<br><br></li>
+                <li>Marque com bandeiras todas as minas corretamente e ganhe o jogo!<br><br></li>
+                <li>Perde o jogo se revelar uma mina ou se utilizar todas as bandeiras e não acertar em todas as
+                    minas!<br><br><br></li>
+            </ul>
+
+        </div>
+
+        <div class="slides fade">
+
+            <div>
+                <p><b>Modos de jogo:</b></p>
+                <p><b>Clássico :</b> Tente fazer o seu melhor tempo!</p>
+                <p><b>TimeRush :</b> Tente fazer o seu melhor tempo enquanto corre para o tempo não terminar!</p>
+                <p><b>MaxExplore :</b> Tente fazer o seu melhor tempo, mas atenção há um número máximo de casas que pode
+                    explorar!</p>
+                <p><b>Fácil :</b> Tabuleiro 9x9, em TimeRush tempo máx 3 min, em MaxExplore máx 50 casas</p>
+                <p><b>Médio :</b> Tabuleiro 16x16, em TimeRush tempo máx 2 min, em MaxExplore máx 80 casas</p>
+                <p><b>Difícil :</b> Tabuleiro 30x16, em TimeRush tempo máx 1 min, em MaxExplore máx 180 casas</p>
+            </div>
+
+        </div>
+
+        <div class="slides fade">
+
+            <div>
+                <p>Revelar conteúdo do quadrado:<br><img class="rato" src="../imagens/rato_esq.gif" alt="Left click" />
+                </p>
+            </div>
+            <div>
+                <p>Marcar quadrado com bandeira ou dúvida:<br><img class="rato" src="../imagens/rato_dir.gif"
+                        alt="Right click" /></p>
+            </div>
+
+        </div>
+
+        <div class="slides fade">
+
+            <div>
+                <p><b>Facto!</b></p>
+                <p>Ao contrário do é pensado, a Microsoft não foi a criadora do jogo.<br>
+                    Este mini jogo de arcade existe desde da década de 60.<br>
+                    Nos anos 90, a Microsoft decidiu incorporar este jogo nos seus sistemas operativos,<br>
+                    comprando os seus direitos autoriais.</p>
+            </div>
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <div id="instruções2">
+        <video id="videoinstruções" controls>
+            <source src="../imagens/How_to_Play_Minesweeper.mp4" type="video/mp4">
+            <p>O seu browser não suporta o elemento Vídeo.</p>
+        </video>
+        <p id="legenda"><strong>Vídeo tutorial - Jogo Minesweeper</strong></p>
+    </div>
+    <footer>
+        <p>Joana Ribeiro nº58625 | Laura Tomás nº 58641 | Margarida Trindade nº58615</p>
+    </footer>
+
+</body>
+
+</html>

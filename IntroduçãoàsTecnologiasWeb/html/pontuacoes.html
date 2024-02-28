@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!--  Universidade de Lisboa  
+      Faculdade de Ciências   
+      Licenciatura - Tecnologias de Informação 
+      2021-2022 Grupo 18   
+      Joana Ribeiro nº 58625    
+      Laura Tomás nº 58641     
+      Margarida Trindade nº 58615    
+      TP21            
+-->
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilos/estilo.css">
+        <link rel="stylesheet" href="../estilos/posicoes.css">
+
+        <script src="../scripts/pontuacao.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+        <title>Pontuações</title>
+</head>
+
+<body class="fundo" id="gridPontuações">
+
+        <h1 class="Subtitulo">Pontuações</h1>
+
+        <nav>
+                <a href="index.html"><img src="https://iconvulture.com/wp-content/uploads/2017/11/home.svg"
+                                alt="Inicio_Jogo" class="IconNav"></a>
+                <a href="jogo.html"><img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Jogo"
+                                class="IconNav"></a>
+                <a class="selected" href="pontuacoes.html"><img src="https://svgsilh.com/svg/2355897.svg"
+                                alt="Pontuações" class="IconNav"></a>
+                <a href="definicoes.html"><img
+                                src="https://wd40.pt/app/plugins/ct-ultimate-gdpr/assets/css/images/skin2-func.svg"
+                                alt="Definições" class="IconNav"></a>
+                <a href="instrucoes.html"><img
+                                src="https://www.pngkit.com/png/full/12-120484_user-manual-icon-manual-icon.png"
+                                alt="Instruções" class="IconNav"></a>
+                <a href="creditos.html"><img src="https://cdn-icons-png.flaticon.com/512/771/771190.png" alt="Créditos"
+                                class="IconNav"></a>
+        </nav>
+
+        <!---As pontuações so sao guardadas se o jogador ganha o jogo-->
+
+        <div class="tabelasPontuacoes">
+
+                <div class="slides fade">
+
+                        <h2 class="modosJogo">Modo Clássico</h2>
+                        <table id="tblPontuacoesFacil1">
+
+                        </table>
+                        <table id="tblPontuacoesMedio1">
+
+                        </table>
+                        <table id="tblPontuacoesDificil1">
+
+                        </table>
+
+
+                </div>
+
+                <div class="slides fade">
+
+                        <h2 class="modosJogo">Time Rush</h2>
+                        <table id="tblPontuacoesFacil2">
+                        </table>
+                        <table id="tblPontuacoesMedio2">
+                        </table>
+                        <table id="tblPontuacoesDificil2">
+                        </table>
+
+
+                </div>
+
+                <div class="slides fade">
+
+                        <h2 class="modosJogo">Modo Max Explore</h2>
+                        <table id="tblPontuacoesFacil3">
+
+                        </table>
+                        <table id="tblPontuacoesMedio3">
+
+                        </table>
+                        <table id="tblPontuacoesDificil3">
+
+                        </table>
+
+                </div>
+
+                <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <footer>
+                <p>Joana Ribeiro nº58625 | Laura Tomás nº 58641 | Margarida Trindade nº58615</p>
+        </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!--  Universidade de Lisboa  
+      Faculdade de Ciências   
+      Licenciatura - Tecnologias de Informação 
+      2021-2022 Grupo 18   
+      Joana Ribeiro nº 58625    
+      Laura Tomás nº 58641     
+      Margarida Trindade nº 58615    
+      TP21            
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilo.css">
+    <link rel="stylesheet" href="../estilos/posicoes.css">
+
+    <script src="../scripts/jogo.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+    <title>Jogo</title>
+</head>
+
+<body id="Jogo" class="fundo">
+    <audio controls  id="audio">
+        <source src="../sons/HinaCC0_011_Fallen_leaves.mp3" type="audio/mp3">
+        <p>O seu browser não suporta o elemento Audio.</p>
+    </audio>
+
+    <button id="botaoSom">🔊</button>
+
+    <h1 Class="Subtitulo" id="TituloJogo">Minesweeper</h1>
+    <nav>
+        <a href="index.html"><img src="https://iconvulture.com/wp-content/uploads/2017/11/home.svg" alt="Inicio_Jogo"
+                class="IconNav"></a>
+        <a class="selected" href="jogo.html"><img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Jogo"
+                class="IconNav"></a>
+        <a href="pontuacoes.html"><img src="https://svgsilh.com/svg/2355897.svg" alt="Pontuações" class="IconNav"></a>
+        <a href="definicoes.html"><img
+                src="https://wd40.pt/app/plugins/ct-ultimate-gdpr/assets/css/images/skin2-func.svg" alt="Definições"
+                class="IconNav"></a>
+        <a href="instrucoes.html"><img src="https://www.pngkit.com/png/full/12-120484_user-manual-icon-manual-icon.png"
+                alt="Instruções" class="IconNav"></a>
+        <a href="creditos.html"><img src="https://cdn-icons-png.flaticon.com/512/771/771190.png" alt="Créditos"
+                class="IconNav"></a>
+    </nav>
+
+
+    <div id="board"></div>
+
+    <!-- Modal (caixa pop up) -->
+    <div id="modalJogo" class="modal">
+
+        <!-- conteudo da caixa -->
+        <div class="modalConteudo">
+            <span class="fechar">&times;</span>
+            <p id="textModal"></p>
+            <br>
+            <button class='botaoJogo' id="btnPontos">Ir para Pontuações</button>
+        </div>
+
+    </div>
+
+    <!-- Modal (caixa pop up) -->
+    <div id="modalJogo2" class="modal">
+
+        <!-- conteudo da caixa -->
+        <div class="modalConteudo">
+
+            <p>Modo de jogo:</p>
+            <button class="botaoJogo" , id="btnClassico">Clássico</button>
+            <button class="botaoJogo" , id="btnTimeRush">Time Rush</button>
+            <button class='botaoJogo' , id="btnMaxExplore">Max Explore</button>
+
+            <p>Dificuldade:</p>
+
+            <button class='botaoJogo' id="btnFacil" disabled>Fácil</button>
+            <button class='botaoJogo' id="btnMedio" disabled>Médio</button>
+            <button class='botaoJogo' id="btnDificil" disabled>Difícil</button>
+        </div>
+
+    </div>
+
+
+    <div class="barra">
+        <ul class="stats">
+            <li><strong>Tempo:</strong></li>
+
+            <li id="timer">0:0</li>
+            <!--valor base-->
+
+            <li id='mudatext'><strong>Minas por descobrir:</strong></li>
+
+            <li id="bandeiras">-/-</li>
+            <!--valor base-->
+
+        </ul>
+        <button class="botaoJogo" id="btnIniciar">Iniciar</button>
+        <button class="botaoJogo" id="btnReiniciar">Reiniciar</button>
+        <!-- no sei se isto faz sentido ter pq tenhos o parar-->
+    </div>
+    <footer>
+        <p>Joana Ribeiro nº58625 | Laura Tomás nº 58641 | Margarida Trindade nº58615</p>
+    </footer>
+
+
+</body>
+
+</html>
