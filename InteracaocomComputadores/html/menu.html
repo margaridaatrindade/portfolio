@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../estilos/posicoes.css">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/popup.js"></script>
+    <script src="../scripts/time.js" defer></script>
+
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+  <title>Sustainable Foody</title>
+</head>
+<body id="GridMenu">
+    <div class="cabecalho">
+      <nav class="fixed-nav-bar">
+        
+          <a href="#popuptempoespera" id="icontempo"><img src="https://cdn-icons-png.flaticon.com/512/151/151770.png"></a>
+          <a href="reservas.html"><img src="../imagens/reserved.png"></a>
+          <a href="#popupajuda"><img src="../imagens/question.png"></a>
+          <a href="#popupwifi"><img src="https://cdn-icons-png.flaticon.com/512/93/93158.png"></a>
+          <a href="#popupcreditos"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"></a>
+          <a href="#popupidioma"><img src="https://cdn-icons-png.flaticon.com/512/484/484582.png"></a>
+   
+      </nav>
+      <a href="index.html"><img src="../imagens/Logo.png" id="logo"></a>
+          <div id="tray">
+            <img src="https://i.pinimg.com/originals/12/b0/7d/12b07d7d7dbde76a3a687552d50d397f.png" alt="CarrinhoPedido">
+            <div class="count"></div>
+            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+          </div> 
+    </div>
+
+    <!--Icon Tempo de Espera-->
+ 
+    <div id="popuptempoespera" class="overlay">
+      <div class="popup">
+          <h2></h2>
+          <a  id="popupclose" href="#">&times;</a>
+          <div class="progress">
+            <div class="progress_fill"></div>
+            <span class="progress_text">0%</span>
+          </div>
+          <br>
+          <div id="countdown">
+            <p id="time"></p>
+          </div>
+          <button id ="oi" class="btnconcluirpopup" onClick= "window.location.href='questionario.html'" disabled>Questionário</button>
+          <button  class="btnconcluirpopup" onclick="timePassed()">Avançar tempo</button>
+      </div>
+    </div>
+
+  <!--Icon Wi-Fi-->
+
+  <div id="popupwifi" class="overlay">
+    <div class="popup">
+        <h2>Nome da rede:</h2>
+        <a id="popupclose" href="#">&times;</a>
+        <p>ic018</p>
+        <h2>Password:</h2>
+        <p>ic018</p>
+    </div>
+</div>
+
+  <!--Icon Ajuda-->
+
+  <div id="popupajuda" class="overlay">
+       <div class="popup">
+        <h2>Ajuda:</h2>
+        <a  id="popupclose" href="#">&times;</a>
+          <p>Selecione o que pretende consumir no menu e carregue no carrinho para ver o seu pedido.<br>
+            Para eliminar itens do pedido clique na cruz da linha do item que pretende eliminar, para eliminar todos clique em "Esvaziar carrinho".<br>  
+            Clique em "Pagamento" para pagar a conta.<br>        
+          </p>
+       </div>
+   </div>
+
+   <!--Icon Creditos-->
+
+  <div id="popupcreditos" class="overlay">
+    <div class="popup">
+        <h2>Projeto realizado por:</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <p>Margarida Trindade - nº58615 <br>
+            Joana Ribeiro - nº58625<br>
+            Yana Kotsyubynska - nº58637<br>
+            Bizhe Chen - nº58672 <br><br>
+            Faculdade de Ciências da Universidade de Lisboa<br>Licenciatura em Tecnologias de Informação<br>2º ano, 1º semestre<br></p>
+        <h2>Referências:</h2>
+        <a href="https://linktr.ee/projetoIC" class="linktree">Ir para Linktree das referências</a>
+    </div>
+</div>
+
+
+  <!--Icon Idioma-->
+
+  <div id="popupidioma" class="overlay">
+      <div class="popup">
+          <h2>Escolha o idioma</h2>
+          <a  id="popupclose" href="#">&times;</a>
+          <a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma"><figcaption>PT</figcaption></figure></a>
+          <a href="" id="idioma"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="EN" class="IconIdioma"><figcaption>EN</figcaption></figure></a>
+      </div>
+  </div>
+
+    <div class="intro">
+      <h2>Menu</h2>
+      <div id ="pedidoList" class="pedidoList"></div>
+      <div id ="quest" class="quest"></div>
+      <div id ="opcoespagamento2"></div>
+      <div class="filtros">
+      <div class="botaoselecionado filtros1"><a id = "pp" href="" >Pratos Principais</a></div> 
+      <div class="botao filtros1"><a id ="s" href="menuSobremesas.html">Sobremesas</a></div> 
+      <div class="botao filtros1"><a id="b" href="menuBebidas.html">Bebidas</a></div> 
+      <div class="filtros1"><a  onclick="showCheckboxes()" >Filtros</a>
+        <form>
+            
+            <div id="checkboxes" class="multiselect">
+              <label for="one">
+                <input type="checkbox" id="one"/>Sem frutos do mar</label>
+              <label for="two">
+                <input type="checkbox" id="two" 
+                onclick="showMe2('quadrado2', this); showMe4('quadrado4', this); showMe6('quadrado6', this)"/>Sem glúten</label>
+                <!--retira ravioli, esparguete a bolonhesa, peixinhos da horta-->
+              <label for="three">
+                <input type="checkbox" id="three" 
+                onclick="showMe1('quadrado1', this); showMe2('quadrado2', this); showMe4('quadrado4', this); showMe8('quadrado8', this)"/>Sem lactose</label>
+                <!--retira salada, ravioli, esparguete a bolonhesa, bacalhau com natas-->
+              <label for="four">
+                <input type="checkbox" id="four"/>Sem soja</label>
+              <label for="five">
+                <input type="checkbox" id="five" 
+                onclick="showMe3('quadrado3', this); showMe4('quadrado4', this); showMe7('quadrado7', this); showMe8('quadrado8', this)"/>Vegetariano</label>
+                <!--retira entrecosto, esparguete a bolonhesa, strogonoff, bacalhau com natas-->
+            </div>
+         
+        </form>
+      </div>
+
+      <!--Carrinho + Popup do Pedido-->
+
+      <div class="app">
+        <div class="closewindow">
+          <span>x</span>
+        </div>
+        <h3>Pedido</h3>
+           <i class="fa fa-shopping-basket fa-3x" aria-hidden="true"></i>
+            <div class="app-body">
+              <ul class="list"> 			
+              </ul>
+            </div>
+        <h4>Valor: <h4 class="precototal">0€</h4></h4>
+        <div class="openpopup2">
+            Esvaziar carrinho
+        </div> <br>
+        <div class="openpopup">
+        
+          <button  id="btnPagamento" onClick= "window.location.href='opcoespagamento.html'" disabled>Pagamento</button>
+        
+        </div>
+     </div>
+  </div>
+  
+    
+
+    <div id="menu">
+     
+      <div id="quadrado" class="quadrado8">
+        <img src="../imagens/BacalhauComNatas.jpg" id="IconMenu" alt="Bacalhau com Natas">
+        <p id="texto">Bacalhau com Natas</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Bacalhau com Natas &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " value= 8 id="botoes1">Pedir</a><a href="#popupFood8" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado3">
+        <img src="../imagens/EntrecostoAssado.jpg" id="IconMenu" alt="Entrecosto Assado">
+        <p id="texto">Entrecosto Assado</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Entrecosto Assado &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood3" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado4">
+        <img src="../imagens/EspargueteBolonhesa.png" id="IconMenu" alt="Esparguete à bolonhesa">
+        <p id="texto">Esparguete à bolonhesa</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Esparguete à bolonhesa &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood4" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado6">
+        <img src="../imagens/PeixinhosDaHorta.jpg" id="IconMenu" alt="Peixinhos da Horta">
+        <p id="texto">Peixinhos da Horta</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Peixinhos da Horta&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood6" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado2">
+        <img src="../imagens/RavioliVegano.jpg" id="IconMenu" alt="Ravioli Vegano">
+        <p id="texto">Ravioli Vegano</p>
+        <p id="preco">8€</p>
+        <a  class ="btnpediu" alt="Ravioli Vegano &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood2" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado5">
+        <img src="../imagens/RisotoEspinafres.jpg" id="IconMenu" alt="Risoto de Espinafres">
+        <p id="texto">Risoto de Espinafres</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Risoto de Espinafres &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood5" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado1">
+        <img src="../imagens/SaladaMediterranea.jpg" id="IconMenu" alt="Salada Mediterrânea">
+        <p id="texto">Salada Mediterrânea</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Salada Mediterrânea &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood1" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+      <div id="quadrado" class="quadrado7">
+        <img src="../imagens/Strogonoff.jpg" id="IconMenu" alt="Strogonoff">
+        <p id="texto">Strogonoff</p>
+        <p id="preco">8€</p>
+        <a class ="btnpediu" alt="Strogonoff &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" value= 8 id="botoes1">Pedir</a><a href="#popupFood7" id="botoes2"><img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" id="IconInfo"></a>
+      </div>
+
+    </div>
+
+    <!--Info Bacalhau com Natas-->
+
+    <div id="popupFood8" class="overlay">
+      <div class="popup">
+        <h2>Bacalhau com Natas</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+           <li>Bacalhau</li>
+           <li>Alho</li>
+           <li>Cebola</li>
+           <li>Natas Bechamel</li>
+           <li>Sal</li>
+           <li>Noz-Moscada</li>
+           <li>Limão</li>
+           <li>Queijo</li>
+        </ul>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+           400g<br><br>
+           700 kcal<br>
+           42g gordura<br>
+           32g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>5 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Entrecosto Assado com Mel e Laranja-->
+
+    <div id="popupFood3" class="overlay">
+      <div class="popup">
+        <h2>Entrecosto Assado com Mel e Laranja</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+           <li>Entrecosto</li>
+           <li>Alho</li>
+           <li>Pimentão Fumado</li>
+           <li>Sal</li>
+           <li>Pimenta Preta</li>
+           <li>Azeite</li>
+           <li>Sumo de Laranja</li>
+           <li>Mel</li>
+        </ul>
+        <h3>Observações:</h3>
+        <p>Não contém glúten.</p>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+           400g
+           <br><br>
+           250 kcal<br>
+           10g gordura<br>
+           18,6g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>5 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Esparguete à bolonhesa-->
+
+    <div id="popupFood4" class="overlay">
+      <div class="popup">
+        <h2>Esparguete à bolonhesa</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+           <li>Esparguete</li>
+           <li>Alho</li>
+           <li>Aipo</li>
+           <li>Cebola</li>
+           <li>Carne de Novilho</li>
+           <li>Tomate Pelado</li>
+           <li>Polpa de Tomate</li>
+           <li>Tomilho</li>
+           <li>Queijo Parmesão Ralado</li>
+        </ul>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+           300g
+           <br><br>
+           452 kcal<br>
+           55,5g gordura<br>
+           24,3g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>4 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Peixinhos da horta-->
+
+    <div id="popupFood6" class="overlay">
+      <div class="popup">
+        <h2>Peixinhos da horta</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+           <li>Feijão-Verde</li>
+           <li>Sal</li>
+           <li>Farinha</li>
+           <li>Pimenta Preta</li>
+           <li>Ovos</li>
+           <li>Azeite</li>
+           <li>Água com gás</li>
+        </ul>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+           200g
+           <br><br>
+           417 kcal<br>
+           18,6g gordura<br>
+           13g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>5 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Ravioli Vegano-->
+
+    <div id="popupFood2" class="overlay">
+      <div class="popup">
+        <h2>Ravioli Vegano</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+          <li>Cebola roxa</li>
+          <li>Alho-francês</li>
+          <li>Pistache</li>
+          <li>Azeite Balsâmico</li>
+          <li>Azeite</li>
+          <li>Vinho Tinto</li>
+          <li>Açúcar</li>
+          <li>Tomilho</li>
+          <li>Sal</li>
+          <li>Limão</li>
+          <li>Queijo Vegano</li>
+          <li>Molho:
+              <ul>
+                <li>Leite de castanhas</li>
+                <li>Sal</li>
+                <li>Manjericão</li>
+                <li>Caldo de Legumes</li>
+                <li>Alho</li>
+              </ul>
+          </li>
+        </ul>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+          200g
+          <br><br>
+          321 kcal<br>
+          6g gordura<br>
+          17g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>3 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Risoto de espinafre-->
+
+    <div id="popupFood5" class="overlay">
+      <div class="popup">
+        <h2>Risoto de espinafre</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+           <li>Arroz</li>
+           <li>Espinafre</li>
+           <li>Cebola</li>
+           <li>Noz-Moscada</li>
+           <li>Coentros</li>
+           <li>Sal</li>
+           <li>Azeite</li>
+           <li>Maizena</li>
+           <li>Leite s/lactose</li>
+        </ul>
+        <h3>Observações:</h3>
+        <p>Não contém lactose.</p>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+           330g
+           <br><br>
+           362,4 kcal<br>
+           16,9g gordura<br>
+           9,5g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>4 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Salada Mediterrânea-->
+
+    <div id="popupFood1" class="overlay">
+      <div class="popup">
+        <h2>Salada Mediterrânea</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+          <li>Alface</li>
+          <li>Rúcula</li>
+          <li>Agrião</li>
+          <li>Tomate Cherry</li>
+          <li>Pepino</li>
+          <li>Queijo Feta</li>
+          <li>Cebola Roxa</li>
+          <li>Crouton</li>
+          <li>Azeitona</li>
+          <li>Nozes</li>
+          <li>Sal</li>
+          <li>Pimenta Preta</li>
+          <li>Ervas Aromáticas</li>
+          <li>Vinagre Balsâmico</li>
+        </ul>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+          300g
+          <br><br>
+          315 kcal<br>
+          7g gordura<br>
+          18g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>5 estrelas</p>
+      </div>
+    </div>
+
+    <!--Info Strogonoff-->
+
+    <div id="popupFood7" class="overlay">
+      <div class="popup">
+        <h2>Strogonoff</h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <h3>Ingredientes:</h3>
+        <ul>
+           <li>Frango</li>
+           <li>Cebola</li>
+           <li>Manteiga sem lactose</li>
+           <li>Leite de Amêndoa</li>
+           <li>Amido de Milho</li>
+           <li>Molho de Tomate</li>
+           <li>Cogumelos</li>
+           <li>Molho Inglês</li>
+           <li>Noz-Moscada</li>
+           <li>Arroz</li>
+           <li>Batata Palha</li>
+        </ul>
+        <h3>Alergéneos:</h3>
+        <p>Pode conter traços de soja, castanha de cajú, castanhas e amêndoas.</p>
+        <h3>Observações:</h3>
+        <p>Não contém glúten nem lactose.</p>
+        <h3>Informação nutricional:</h3>
+        <p>Porção:<br>
+           350g
+           <br><br>
+           352 kcal<br>
+           12g gordura<br>
+           18g proteina<br>
+        </p>
+        <h3>Origem dos produtos:</h3>
+        <p id="origem">Portugal</p><a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma2"></figure></a>
+        <h3>Avaliação mais recente:</h3>
+        <p>2 estrelas</p>
+      </div>
+    </div>
+
+
+</body>
+</html>

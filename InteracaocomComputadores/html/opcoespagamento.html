@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../estilos/posicoes.css">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/popup.js"></script>
+    <script src="../scripts/time.js" defer></script>
+
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+  <title>Sustainable Foody</title>
+</head>
+<body id="GridPagamentoInit">
+    <div class="cabecalho">
+        <nav class="fixed-nav-bar">
+          
+            <a href="#popuptempoespera" id="icontempo"><img src="https://cdn-icons-png.flaticon.com/512/151/151770.png"></a>
+            <a href="reservas.html"><img src="../imagens/reserved.png"></a>
+            <a href="#popupajuda"><img src="../imagens/question.png"></a>
+            <a href="#popupwifi"><img src="https://cdn-icons-png.flaticon.com/512/93/93158.png"></a>
+            <a href="#popupcreditos"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"></a>
+            <a href="#popupidioma"><img src="https://cdn-icons-png.flaticon.com/512/484/484582.png"></a>
+            <a href="menu.html"><img src="https://cdn-icons-png.flaticon.com/512/61/61449.png?w=360"></a>
+          
+        </nav>
+        <a href="index.html"><img src="../imagens/Logo.png" id="logo"></a>
+      </div>
+
+  <!--Icon Tempo de Espera-->
+ 
+  <div id="popuptempoespera" class="overlay">
+    <div class="popup">
+        <h2></h2>
+        <a  id="popupclose" href="#">&times;</a>
+        <div class="progress">
+          <div class="progress_fill"></div>
+          <span class="progress_text">0%</span>
+        </div>
+        <br>
+        <div id="countdown">
+          <p id="time"></p>
+        </div>
+        <button id ="oi" class="btnconcluirpopup" onClick= "window.location.href='questionario.html'" disabled>Questionário</button>
+        <button  class="btnconcluirpopup" onclick="timePassed()">Avançar tempo</button>
+    </div>
+  </div>
+      
+ <!--Icon Wi-Fi-->
+
+ <div id="popupwifi" class="overlay">
+  <div class="popup">
+      <h2>Nome da rede:</h2>
+      <a id="popupclose" href="#">&times;</a>
+      <p>ic018</p>
+      <h2>Password:</h2>
+      <p>ic018</p>
+  </div>
+</div>
+
+<!--Icon Ajuda-->
+
+<div id="popupajuda" class="overlay">
+  <div class="popup">
+   <h2>Ajuda:</h2>
+   <a id="popupclose" href="#">&times;</a>
+     <p>Para pagar a totalidade do pedido, clique em "Pagar tudo" e de seguida em "Efetuar pagamento".<br>
+       Para pagar apenas uma parte, clique em "Pagar parte", assinale os itens a pagar e clique em "Efetuar pagamento". 
+     </p>
+  </div>
+</div>
+
+  <!--Icon Créditos-->
+
+  <div id="popupcreditos" class="overlay">
+       <div class="popup">
+           <h2>Projeto realizado por:</h2>
+           <a id="popupclose" href="#">&times;</a>
+           <p>Margarida Trindade - nº58615 <br>
+               Joana Ribeiro - nº58625<br>
+               Yana Kotsyubynska - nº58637<br>
+               Bizhe Chen - nº58672 <br><br>
+               Faculdade de Ciências da Universidade de Lisboa<br>Licenciatura em Tecnologias de Informação<br>2º ano, 1º semestre<br></p>
+           <h2>Referências:</h2>
+           <a href="https://linktr.ee/projetoIC" class="linktree">Ir para Linktree das referências</a>
+       </div>
+   </div>
+
+
+  <!--Icon Idioma-->
+
+  <div id="popupidioma" class="overlay">
+      <div class="popup">
+          <h2>Escolha o idioma</h2>
+          <a id="popupclose" href="#">&times;</a>
+          <a href="" id="idioma"><figure><img src="https://bandeira.net/wp-content/uploads/2018/10/bandeira-de-portugal.png" alt="PT" class="IconIdioma"><figcaption>PT</figcaption></figure></a>
+          <a href="" id="idioma"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="EN" class="IconIdioma"><figcaption>EN</figcaption></figure></a>
+      </div>
+  </div>
+
+  <h2 id="TituloPag">Pagamento</h2>
+
+  <div id="pagamentos">
+    <div id ="btnPagamento"></div>
+    <div id="listapedido">
+      <h4>Pedido:</h4>
+      
+      <form class="pedidoList"> 			
+      </form>
+      <h4 id="valorPagar">Valor: <h4 class = "precoP">0€</h4></h4>
+    </div>
+    <div id="opcoes">
+      <a class="all botaoselecionado filtros1" id="opcoespagamento1" >Pagar Tudo</a>
+      <br>
+      <a class="some filtros1" id="opcoespagamento" >Pagar parte</a>
+      <br>
+      <button class="filtros2 paga"  id="opcoespagamento2" disabled>Pagamento</button>
+    </div>
+    
+</div>
+  
+
+</body>
+</html>
