@@ -1,0 +1,4 @@
+-->botao do som do jogo
+-->tabelas
+-->curiosidades historicas
+-->modos de jogo
